@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 150 20% 95%;
+    --secondary-foreground: 160 30% 15%;
+    --muted: 150 10% 95%;
+    --muted-foreground: 160 5% 46%;
+    --accent: 150 20% 95%;
+    --accent-foreground: 160 30% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 150 10% 89%;
+    --input: 150 10% 89%;
+    --ring: 160 84% 39%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 7%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 217 32% 13%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 13%;
+    --muted-foreground: 215 20% 60%;
+    --accent: 217 32% 13%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 32% 16%;
+    --input: 217 32% 16%;
+    --ring: 160 84% 39%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  .page-break-before { page-break-before: always; }
+  .print-area { max-width: 100%; padding: 0; }
+  body { font-size: 14px; }
+}
